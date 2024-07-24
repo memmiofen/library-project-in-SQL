@@ -47,3 +47,16 @@ def get_remaining_quantity(book_id):
     cursor.execute(query)
     remaining_quantity = cursor.fetchone()[0]
     return remaining_quantity
+
+def show_borrowed_books(connection):
+  cursor = connection.cursor()
+  query = """
+  SELECT bb.borrow_id, u.user_name, b.book_title, bb.borrowed_date, bb.returned_date
+  FROM
+    borrowed_books bb
+  INNER JOIN users u ON bb.user_id = u.user_id
+  INNER JOIN books b ON bb.book_id = b.book_id;
+  """
+  cursor.execute(query)
+  rows = cursor.fetchall()
+  return rows
