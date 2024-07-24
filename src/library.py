@@ -156,4 +156,6 @@ def show_borrowed_user(connection, user_id):
     return user_name, borrowed_books
 
 connection = connect_to_db(host="localhost", user="root", password="M0559647062o", database="library")
-
+# print(show_borrowed_books(connection))
+# borrow_book(connection, 1, 4)
+print(show_borrowed_user(connection,1))
