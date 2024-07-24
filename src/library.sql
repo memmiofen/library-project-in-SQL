@@ -18,7 +18,7 @@
 --
 -- Table structure for table `books`
 --
-
+UNLOCK TABLES;
 CREATE DATABASE IF NOT EXISTS library;
 USE library;
 
@@ -30,9 +30,10 @@ CREATE TABLE `books` (
   `title` varchar(255) NOT NULL,
   `author` varchar(255) NOT NULL,
   `year` int NOT NULL,
-  'quantity' int NULL
+  `quantity` INT not null,
   PRIMARY KEY (`book_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +42,55 @@ CREATE TABLE `books` (
 
 LOCK TABLES `books` WRITE;
 /*!40000 ALTER TABLE `books` DISABLE KEYS */;
-INSERT INTO `books` VALUES (1,'The Hitchhikers Guide to the Galaxy','Douglas Adams',1979),(2,'The Lord of the Rings','J.R.R. Tolkien',1954),(3,'The Hobbit','J.R.R. Tolkien',1937),(4,'Pride and Prejudice','Jane Austen',1813),(5,'To Kill a Mockingbird','Harper Lee',1960),(6,'1984','George Orwell',1949),(7,'Animal Farm','George Orwell',1945),(8,'The Catcher in the Rye','J.D. Salinger',1951),(9,'The Stranger','Albert Camus',1942),(10,'The Metamorphosis','Franz Kafka',1915),(11,'Lolita','Vladimir Nabokov',1955),(12,'The Canterbury Tales','Geoffrey Chaucer',1387),(13,'Don Quixote','Miguel de Cervantes',1605),(14,'The Odyssey','Homer',-800),(15,'The Iliad','Homer',-800),(16,'The Great Gatsby','F. Scott Fitzgerald',1925),(17,'One Hundred Years of Solitude','Gabriel García Márquez',1967),(18,'Invisible Man','Ralph Ellison',1952),(19,'Mrs. Dalloway','Virginia Woolf',1925),(20,'Hamlet','William Shakespeare',1603),(21,'The Adventures of Sherlock Holmes','Arthur Conan Doyle',1892),(22,'Brave New World','Aldous Huxley',1932),(23,'Lord of the Flies','William Golding',1954),(24,'Heart of Darkness','Joseph Conrad',1902),(25,'The Picture of Dorian Gray','Oscar Wilde',1891),(26,'Ulysses','James Joyce',1922),(27,'The Sound and the Fury','William Faulkner',1929),(28,'As I Lay Dying','William Faulkner',1939),(29,'Absalom, Absalom!','William Faulkner',1936),(30,'The Sun Also Rises','Ernest Hemingway',1926),(31,'A Farewell to Arms','Ernest Hemingway',1929),(32,'For Whom the Bell Tolls','Ernest Hemingway',1940),(33,'The Grapes of Wrath','John Steinbeck',1939),(34,'Of Mice and Men','John Steinbeck',1937),(35,'East of Eden','John Steinbeck',1955),(36,'The Silmarillion','J.R.R. Tolkien',1977),(37,'The House in the Cerulean Sea','T.J. Klune',2020),(38,'Circe','Madeline Miller',2018),(39,'The Song of Achilles','Madeline Miller',2012),(40,'Hamnet','Maggie OFarrell',2020),(41,'The Testaments','Margaret Atwood',2019),(42,'The Handmaids Tale','Margaret Atwood',1985),(43,'Klara and the Sun','Kazuo Ishiguro',2021),(44,'The Remains of the Day','Kazuo Ishiguro',1989),(45,'Never Let Me Go','Kazuo Ishiguro',2005),(46,'The Lincoln Highway','Amor Towles',2021),(47,'Leave the World Behind','Rumaan Alam',2020),(48,'The Nickel Boys','Colson Whitehead',2019);
+INSERT INTO `books` VALUES 
+(1,'The Hitchhikers Guide to the Galaxy','Douglas Adams',1979,1),
+(2,'The Lord of the Rings','J.R.R. Tolkien',1954,1),
+(3,'The Hobbit','J.R.R. Tolkien',1937,1),
+(4,'Pride and Prejudice','Jane Austen',1813,1),
+(5,'To Kill a Mockingbird','Harper Lee',1960,1),
+(6,'1984','George Orwell',1949,1),
+(7,'Animal Farm','George Orwell',1945,1),
+(8,'The Catcher in the Rye','J.D. Salinger',1951,1),
+(9,'The Stranger','Albert Camus',1942,1),
+(10,'The Metamorphosis','Franz Kafka',1915,1),
+(11,'Lolita','Vladimir Nabokov',1955,1),
+(12,'The Canterbury Tales','Geoffrey Chaucer',1387,1),
+(13,'Don Quixote','Miguel de Cervantes',1605,1),
+(14,'The Odyssey','Homer',100,1),
+(15,'The Iliad','Homer',115,1),
+(16,'The Great Gatsby','F. Scott Fitzgerald',1925,1),
+(17,'One Hundred Years of Solitude','Gabriel García Márquez',1967,1),
+(18,'Invisible Man','Ralph Ellison',1952,1),
+(19,'Mrs. Dalloway','Virginia Woolf',1925,1),
+(20,'Hamlet','William Shakespeare',1603,1),
+(21,'The Adventures of Sherlock Holmes','Arthur Conan Doyle',1892,1),
+(22,'Brave New World','Aldous Huxley',1932,1),
+(23,'Lord of the Flies','William Golding',1954,1),
+(24,'Heart of Darkness','Joseph Conrad',1902,1),
+(25,'The Picture of Dorian Gray','Oscar Wilde',1891,1),
+(26,'Ulysses','James Joyce',1922,1),
+(27,'The Sound and the Fury','William Faulkner',1929,1),
+(28,'As I Lay Dying','William Faulkner',1939,1),
+(29,'Absalom, Absalom!','William Faulkner',1936,1),
+(30,'The Sun Also Rises','Ernest Hemingway',1926,1),
+(31,'A Farewell to Arms','Ernest Hemingway',1929,1),
+(32,'For Whom the Bell Tolls','Ernest Hemingway',1940,1),
+(33,'The Grapes of Wrath','John Steinbeck',1939,1),
+(34,'Of Mice and Men','John Steinbeck',1937,1),
+(35,'East of Eden','John Steinbeck',1955,1),
+(36,'The Silmarillion','J.R.R. Tolkien',1977,1),
+(37,'The House in the Cerulean Sea','T.J. Klune',2020,1),
+(38,'Circe','Madeline Miller',2018,1),
+(39,'The Song of Achilles','Madeline Miller',2012,1),
+(40,'Hamnet','Maggie OFarrell',2020,1),
+(41,'The Testaments','Margaret Atwood',2019,1),
+(42,'The Handmaids Tale','Margaret Atwood',1985,1),
+(43,'Klara and the Sun','Kazuo Ishiguro',2021,1),
+(44,'The Remains of the Day','Kazuo Ishiguro',1989,1),
+(45,'Never Let Me Go','Kazuo Ishiguro',2005,1),
+(46,'The Lincoln Highway','Amor Towles',2021,1),
+(47,'Leave the World Behind','Rumaan Alam',2020,1),
+(48,'The Nickel Boys','Colson Whitehead',2019,1);
 /*!40000 ALTER TABLE `books` ENABLE KEYS */;
 UNLOCK TABLES;
 
